@@ -6,11 +6,11 @@ gem 'rails', '4.1.7'
 # Active Admin allows us to edit the database from the web server
 gem 'activeadmin', github: 'gregbell/active_admin'
 
+# Devise is used for authentication of admin users
+gem 'devise'
+
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', group: :development
-
-# Spring speeds up development by keeping your application running in the background.
-gem 'spring', group: :development
 
 group :production do
   gem 'pg'
