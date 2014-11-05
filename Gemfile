@@ -9,6 +9,9 @@ gem 'activeadmin', github: 'gregbell/active_admin'
 # Devise is used for authentication of admin users
 gem 'devise'
 
+# Password protection
+gem "figaro"
+
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', group: :development
 

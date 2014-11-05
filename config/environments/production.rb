@@ -1,6 +1,10 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  # Default URL (as provided by Active Admin setup instructions)
+  config.action_mailer.default_url_options = { host: 'http://thawing-tundra-1317.herokuapp.com', port: 3000 }
+
+
   # Code is not reloaded between requests.
   config.cache_classes = true
 
