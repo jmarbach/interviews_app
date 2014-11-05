@@ -46,8 +46,8 @@ group :development, :test do
   gem 'web-console', '2.0.0.beta3'
 
 group :production do
-  gem 'pg',             '0.17.1'
-  gem 'rails_12factor', '0.0.2'
+  gem 'pg'
+  gem 'rails_12factor'
 end
 
 end
