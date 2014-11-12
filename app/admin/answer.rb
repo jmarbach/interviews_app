@@ -14,11 +14,11 @@ ActiveAdmin.register Answer do
   #   permitted
   # end
 
-  permit_params :textQustion, :textAnswer
+  permit_params :textQustion, :textAnswer, :question_id, :answers_id
 
   index do
     selectable_column
-    actions
+    column 'Answer', :textAnswer
   end
 
 
