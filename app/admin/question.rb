@@ -15,15 +15,15 @@ ActiveAdmin.register Question do
   # end
 
 
-2
-3
-4
-5
-6
+
 index do
   column :textQuestion
   column :textAnswer
   column :stringCompany
+  selectable_column
+  id_column
+  default_actions
+
 end
 
 

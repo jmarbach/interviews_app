@@ -1,4 +1,4 @@
-ActiveAdmin.register Answer do
+axActiveAdmin.register Answer do
 
 
   # See permitted parameters documentation:
@@ -13,6 +13,13 @@ ActiveAdmin.register Answer do
   #   permitted << :other if resource.something?
   #   permitted
   # end
+
+  index do
+    selectable_column
+    id_column
+    default_actions
+  end
+
 
 
 end
