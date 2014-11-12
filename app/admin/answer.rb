@@ -1,4 +1,4 @@
-axActiveAdmin.register Answer do
+ActiveAdmin.register Answer do
 
 
   # See permitted parameters documentation:
