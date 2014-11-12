@@ -14,12 +14,15 @@ ActiveAdmin.register Company do
   #   permitted
   # end
   
+  permit_params :stringName, :stringLocation, :stringIndustry
+
   index do
     selectable_column
-    id_column
-    default_actions
+    column 'Company Name', :stringName
+    column 'Location', :stringLocation
+    column 'Industry', :stringIndustry
+    actions
   end
-
 
 
 end

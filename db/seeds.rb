@@ -6,8 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Companies = Company.create! :name => "Google"
+Companies = Company.create! :stringName => "Google"
  
-question1 = Question.create! :question_sentence => "How many golf balls fit in a 747?"
+question1 = Question.create! :textQuestion => "How many golf balls fit in a 747?"
  
-Answer.create! :text_answer => "200,000", :question => question1
