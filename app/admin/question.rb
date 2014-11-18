@@ -15,14 +15,13 @@ ActiveAdmin.register Question do
   # end
 
 
-permit_params :textQustion, :textAnswer, :stringCompany
+permit_params :textQuestion, :textAnswer, :stringCompany, :company_id
 
 
 index do
   selectable_column
   column 'Interview Question', :textQuestion
-  column 'Answer', :textAnswer
-  column 'Company Name', :stringCompany
+  column 'Company Name', :company_id
   actions
 end
 
