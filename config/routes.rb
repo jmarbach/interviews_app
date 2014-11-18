@@ -1,12 +1,14 @@
 Rails.application.routes.draw do
-  root 'static_pages/home'
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
+
+  root 'static_pages#home'
   
   #get 'static_pages/home'
 
-  get 'help' => 'static_pages/help'
+  get 'help' => 'static_pages#help'
 
-  devise_for :admin_users, ActiveAdmin::Devise.config
-  ActiveAdmin.routes(self)
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
