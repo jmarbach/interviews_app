@@ -19,7 +19,6 @@ permit_params :stringTopic, :question_id
 
 index do
   selectable_column
-  column 'TopicID', :topic_id
   column 'Topic', :stringTopic
   actions
 end
