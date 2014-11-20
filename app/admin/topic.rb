@@ -14,7 +14,7 @@ ActiveAdmin.register Topic do
   #   permitted
   # end
 
-permit_params :stringTopic, :question_id
+permit_params :stringTopic, :stringJobType, :topic_id, :job_types_id, :question_id 
 
 
 index do

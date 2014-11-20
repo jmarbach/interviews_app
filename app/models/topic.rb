@@ -1,4 +1,4 @@
 class Topic < ActiveRecord::Base
   has_many :questions
-  has_many :jobtypes
+  has_many :job_types
 end

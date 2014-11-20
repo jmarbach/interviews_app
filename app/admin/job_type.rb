@@ -14,12 +14,11 @@ ActiveAdmin.register JobType do
   #   permitted
   # end
 
-permit_params :stringTopic, :question_id
-
+permit_params :stringJobTypec, :stringTopic, :job_types_id, :topic_id
 
 index do
   selectable_column
-  column 'Job Type', :stringJobType
+  column 'Job Type', :stringJobTypec
   actions
 end
 

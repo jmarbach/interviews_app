@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141120200112) do
+ActiveRecord::Schema.define(version: 20141120200937) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -80,6 +80,7 @@ ActiveRecord::Schema.define(version: 20141120200112) do
     t.integer  "question_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "job_types_id", default: 0, null: false
   end
 
   add_index "topics", ["question_id"], name: "index_topics_on_question_id"
