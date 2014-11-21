@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141120215940) do
+ActiveRecord::Schema.define(version: 20141121054103) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -51,6 +51,20 @@ ActiveRecord::Schema.define(version: 20141120215940) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "question_id", default: 0, null: false
+  end
+
+  create_table "assets", force: true do |t|
+    t.string   "storage_uid"
+    t.string   "storage_name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "storage_width"
+    t.integer  "storage_height"
+    t.float    "storage_aspect_ratio"
+    t.integer  "storage_depth"
+    t.string   "storage_format"
+    t.string   "storage_mime_type"
+    t.string   "storage_size"
   end
 
   create_table "companies", force: true do |t|
@@ -94,6 +108,19 @@ ActiveRecord::Schema.define(version: 20141120215940) do
 
   add_index "questions_has_topics", ["question_id"], name: "index_questions_has_topics_on_question_id"
   add_index "questions_has_topics", ["topic_id"], name: "index_questions_has_topics_on_topic_id"
+
+  create_table "rich_rich_files", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "rich_file_file_name"
+    t.string   "rich_file_content_type"
+    t.integer  "rich_file_file_size"
+    t.datetime "rich_file_updated_at"
+    t.string   "owner_type"
+    t.integer  "owner_id"
+    t.text     "uri_cache"
+    t.string   "simplified_type",        default: "file"
+  end
 
   create_table "topic_has_job_types", force: true do |t|
     t.integer  "topic_id"

@@ -29,6 +29,13 @@ ActiveAdmin.register Answer do
     actions
   end
 
+  form do |f|
+    f.inputs "Answer" do
+      f.input :textAnswer, :label => "Answer", as: :wysihtml5
+    end
+    f.actions
+  end
+
 
 
 end

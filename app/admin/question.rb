@@ -23,10 +23,17 @@ index do
   column 'Interview Question', :textQuestion
   #column 'Company ID', :company_id
   column "Company Name" do |m|
-   name = Company.find(m.company_id).stringName
+    name = Company.find(m.company_id).stringName
   end 
   actions
 end
+
+ form do |f|
+    f.inputs "Interview Question" do
+      f.input :textQuestion, :label => "Question"
+    end
+    f.actions
+  end
 
 
 

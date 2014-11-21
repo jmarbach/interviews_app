@@ -24,5 +24,16 @@ ActiveAdmin.register Company do
     actions
   end
 
+  form do |f|
+    f.inputs "Company Details" do
+      f.input :stringName, :label => "Name"
+      f.input :stringLocation, :label => "Location"
+      f.input :stringIndustry, :label => "Industry"
+    end
+    f.actions
+  end
+
+
+
 
 end
