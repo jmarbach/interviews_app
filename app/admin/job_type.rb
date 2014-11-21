@@ -19,6 +19,7 @@ permit_params :stringJobTypec, :stringTopic, :job_types_id, :topic_id
 index do
   selectable_column
   column 'Job Type', :stringJobTypec
+  column 'Topics', :topic_id
   actions
 end
 

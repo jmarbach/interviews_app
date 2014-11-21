@@ -3,5 +3,8 @@ class Topic < ActiveRecord::Base
   has_many :questions, through: :QuestionsHasTopics
 
   has_many :TopicHasJobTypes
-  has_many :job_types, through: :TopicHasJobTypes
+ # !!! NEEDS DEBUGGING !!! 
+ #has_many :job_types, through: :TopicHasJobTypes
+ # 
+
 end

@@ -18,8 +18,14 @@ ActiveAdmin.register Answer do
 
   index do
     selectable_column
-    column 'Question', :question_id
+
+    column 'Question ID', :question_id
     column 'Answer', :textAnswer
+   
+    #column "Question" do |m|
+    #  name = Question.find(m.Question_id).textQuestion
+    #end 
+
     actions
   end
 
