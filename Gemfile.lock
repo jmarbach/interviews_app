@@ -213,7 +213,6 @@ DEPENDENCIES
   bootstrap-sass
   devise
   figaro
-  paperclip
   pg
   rails (= 4.1.7)
   rails_12factor

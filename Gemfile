@@ -17,7 +17,7 @@ gem 'bootstrap-sass'
 gem 'turbolinks'   
 
 # Rich text editing
-	#gem 'rich' -- no longer compatible with Rails 4
+	gem 'rich' #-- no longer compatible with Rails 4
 	#gem 'paperclip' -- 
 gem 'activeadmin-dragonfly', github: 'stefanoverna/activeadmin-dragonfly'
 gem 'activeadmin-wysihtml5', github: 'stefanoverna/activeadmin-wysihtml5'

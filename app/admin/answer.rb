@@ -19,7 +19,7 @@ ActiveAdmin.register Answer do
   index do
     selectable_column
 
-    column 'Question ID', :question_id
+    column 'Question ID', :question_id,  :max_width => "150px"
     column 'Answer', :textAnswer
    
     #column "Question" do |m|
