@@ -32,6 +32,7 @@ ActiveAdmin.register Answer do
   form do |f|
     f.inputs "Answer" do
       f.input :textAnswer, :label => "Answer", as: :wysihtml5
+      f.input :question_id, :as => :select, :collection => Question.all
     end
     f.actions
   end

@@ -31,6 +31,7 @@ end
  form do |f|
     f.inputs "Interview Question" do
       f.input :textQuestion, :label => "Question"
+      f.input :stringCompany, :as => :check_boxes, :collection => Company.all
     end
     f.actions
   end
