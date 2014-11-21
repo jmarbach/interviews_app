@@ -15,3 +15,5 @@
 //= require turbolinks
 //= require_tree .
 //= require rich
+//= require jquery
+//= require bootstrap-sprockets

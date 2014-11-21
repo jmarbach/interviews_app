@@ -14,6 +14,7 @@ gem "figaro"
 
 # Styling
 gem 'bootstrap-sass'
+gem 'sass-rails'
 gem 'turbolinks'   
 
 # Rich text editing
