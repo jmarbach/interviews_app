@@ -1,9 +1,11 @@
 class Question < ActiveRecord::Base
 	has_one :answer
 
-	has_many :QuestionsHasTopic
-	has_many :QuestionHasCompany
-	has_many :companies, through: :QuestionsHasTopic
-	has_many :companies, through: :QuestionHasCompany
+	has_many :QuestionsHasTopics
+	has_many :topics, through: :QuestionsHasTopics
+
+	has_many :QuestionsHasCompanies
+	has_many :companies, through: :QuestionsHasCompanies
+	
 
 end

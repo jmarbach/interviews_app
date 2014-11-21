@@ -1,7 +1,7 @@
 class Topic < ActiveRecord::Base
-  has_many :QuestionHasTopic
-  has_many :TopicHasJobType
+  has_many :QuestionsHasTopics
+  has_many :questions, through: :QuestionsHasTopics
 
-  has_many :questions, through: :QuestionHasTopic
-  has_many :job_types, through: :TopicHasJobType
+  has_many :TopicHasJobTypes
+  has_many :job_types, through: :TopicHasJobTypes
 end
