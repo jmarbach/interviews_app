@@ -7,4 +7,8 @@ class Topic < ActiveRecord::Base
  #has_many :job_types, through: :TopicHasJobTypes
  # 
 
+
+	def display_name
+		self.stringTopic
+	end
 end

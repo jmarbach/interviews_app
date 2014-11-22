@@ -8,4 +8,7 @@ class Question < ActiveRecord::Base
 	has_many :companies, through: :QuestionsHasCompanies
 	
 
+	def display_name
+		self.textQuestion
+	end
 end
