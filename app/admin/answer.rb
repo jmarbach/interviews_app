@@ -1,26 +1,15 @@
 ActiveAdmin.register Answer do
 
+  menu priority: 3
 
-  # See permitted parameters documentation:
-  # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
-  #
-  # permit_params :list, :of, :attributes, :on, :model
-  #
-  # or
-  #
-  # permit_params do
-  #   permitted = [:permitted, :attributes]
-  #   permitted << :other if resource.something?
-  #   permitted
-  # end
-
-  permit_params :textQustion, :textAnswer, :question_id, :answers_id, :question_id
+  permit_params :textQustion, :textAnswer, :question_id, :answers_id, :textQuestion
 
   index do
     selectable_column
-
-    column 'Question ID', :question_id,  :max_width => "150px"
-    column 'Answer', :textAnswer
+    id_column
+    column "Question" do |m|
+      question = Question.find(m.question_id).textQuestion
+    end 
    
     #column "Question" do |m|
     #  name = Question.find(m.Question_id).textQuestion
@@ -40,3 +29,4 @@ ActiveAdmin.register Answer do
 
 
 end
+
