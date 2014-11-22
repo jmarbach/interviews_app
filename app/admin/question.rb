@@ -15,7 +15,7 @@ ActiveAdmin.register Question do
   # end
 
 
-permit_params :textQuestion, :textAnswer, :stringCompany, :company_id
+permit_params :textQuestion, :textAnswer, :stringCompany, :company_id, :stringJobTypec, :stringTopic
 
 
 index do
@@ -31,10 +31,13 @@ end
  form do |f|
     f.inputs "Interview Question" do
       f.input :textQuestion, :label => "Question"
-      f.input :stringCompany, :as => :check_boxes, :collection => Company.all
+      f.input :stringCompany, :label => "Companies", :as => :check_boxes, :collection => Company.all
+      f.input :stringTopic, :label => "Question Topic", :as => :check_boxes, :collection => Topic.all
     end
     f.actions
-  end
+ end
+
+
 
 
 
