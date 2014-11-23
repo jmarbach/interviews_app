@@ -18,7 +18,7 @@ end
 form do |f|
     f.inputs "Job Type" do
       f.input :stringJobTypec, :label => "Job Type"
-      f.input :stringTopic, :label => "Question Topics", :as => :check_boxes, :collection => Topic.all
+    #  f.input :stringTopic, :label => "Question Topics", :as => :check_boxes, :collection => Topic.all
     end
   f.actions
 end
