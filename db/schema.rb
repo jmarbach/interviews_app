@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141122235617) do
+ActiveRecord::Schema.define(version: 20141129234700) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -101,16 +101,6 @@ ActiveRecord::Schema.define(version: 20141122235617) do
   add_index "questions_has_companies", ["company_id"], name: "index_questions_has_companies_on_company_id"
   add_index "questions_has_companies", ["question_id"], name: "index_questions_has_companies_on_question_id"
 
-  create_table "questions_has_topics", force: true do |t|
-    t.integer  "question_id"
-    t.integer  "topic_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "questions_has_topics", ["question_id"], name: "index_questions_has_topics_on_question_id"
-  add_index "questions_has_topics", ["topic_id"], name: "index_questions_has_topics_on_topic_id"
-
   create_table "rich_rich_files", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -123,16 +113,6 @@ ActiveRecord::Schema.define(version: 20141122235617) do
     t.text     "uri_cache"
     t.string   "simplified_type",        default: "file"
   end
-
-  create_table "topic_has_job_types", force: true do |t|
-    t.integer  "topic_id"
-    t.integer  "job_types_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "topic_has_job_types", ["job_types_id"], name: "index_topic_has_job_types_on_job_types_id"
-  add_index "topic_has_job_types", ["topic_id"], name: "index_topic_has_job_types_on_topic_id"
 
   create_table "topics", force: true do |t|
     t.string   "stringTopic"

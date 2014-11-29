@@ -3,7 +3,9 @@ class Company < ActiveRecord::Base
 	#has_many :questions, through: :QuestionsHasCompanies
 
 
-	has_and_belongs_to_many :questions, :join_table => "questions_has_companies"
+	#has_and_belongs_to_many :questions, :join_table => "questions_has_companies"
+	
+	validates_presence_of :stringName
 
 	def display_name
 		self.stringName # or whatever column you want
