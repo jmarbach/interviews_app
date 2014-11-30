@@ -10,13 +10,24 @@ index do
   selectable_column
   column 'Interview Question', :textQuestion
   column "Company Name" do |question|
-
     c = Company.find_by_id(question.company_id) 
-
     if c 
       c.stringName else "No company"
     end 
+  end 
+  
+  column "Topic" do |question|
+    t = Topic.find_by_id(question.topic_id) 
+    if t 
+      t.stringTopic else "No topic"
+    end 
+  end 
 
+  column "Job Type" do |question|
+    j = JobType.find_by_id(question.job_types_id) 
+    if j 
+      j.stringJobTypec else "No job type"
+    end 
   end 
   actions
 end
