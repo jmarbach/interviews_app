@@ -56,7 +56,7 @@ end
       f.input :job_types_id, :label => "Job Type", :as => :select, :collection => JobType.all
       
       f.inputs "Companies" do
-        f.has_many :questions_has_companies do |deg|
+        f.has_many :questions_has_companies, :allow_destroy => true do |deg|
           deg.input :company
         end
       end
