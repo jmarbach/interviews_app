@@ -7,8 +7,12 @@ class StaticPagesController < ApplicationController
 
   def sample_question
   	@question = Question.first
-  	@answer = @question.answer
+  	@topic = Topic.first
+  	@jobtype = JobType.first
 
+  	@answer = @question.answer
+  	#@topic = @question.topic
+  	#@jobtype = @question.job_type
   end
 
 end

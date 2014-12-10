@@ -1,3 +1,98 @@
-<%= @question.textQuestion %>
 
-<%= @question.answer.textAnswer.html_safe %>
+<div class="container">
+
+	<div class="row">
+	  <div class="col-md-8">
+	  	<h3><%= @question.textQuestion %></h3>
+
+		<%= @question.answer.textAnswer.html_safe %>
+	  </div>
+
+	  <div class="col-md-4">
+	  		<div class="row">
+		      <div class="col-sm-12 col-sm-12">
+		      	<br><br>
+		      </div>
+		    </div>
+		  	<div class="row">
+		      <div class="col-sm-12 col-sm-12">
+		        <h4>Topic:</h4>
+		        <p class = "lead">
+		      	  <small><%= @topic.stringTopic %></small>
+		      	</p>
+		      </div>
+		    </div>
+		    <div class="row">
+		      <div class="col-sm-12 col-sm-12">
+		        <h4>Job Type:</h4>
+		          <p class = "lead">
+		      		<small><%= @jobtype.stringJobTypec %></small>
+		      	  </p>
+		      </div>
+		    </div>
+		    <div class="row">
+		      <div class="col-sm-12 col-sm-12">
+		        <h4>Companies:</h4>
+		        
+		      </div>
+		    </div>
+	  </div>
+	</div>
+
+	<div class="row">
+  		<div class="col-md-12">
+  				<hr>
+  				 <h2> <small>Explore even more questions and answers below:</small></h2>
+  		</div>
+	</div>
+
+	<div class="row">
+	    <div class="col-md-6">
+		 	<h4>Most Popular Questions</h4>
+  				 
+			<dl class="dl-horizontal">
+				<dt>Google</dt>
+				<dd>How many golf balls fit into a 747?</dd>
+
+				<dt>Amazon</dt>
+				<dd>How would you launch a new product category at Amazon?</dd>
+			</dl>
+  		</div>
+
+
+	    <div class="col-lg-3">
+	        <h4>Topics</h4>
+	          <ul class="list-unstyled">
+			  <li>Programming</li>
+			  <li>Brain Teasers</li>
+			  <li>Math</li>
+			  <li>Case Study</li>
+			  <li>Personality</li>
+			</ul>
+
+	    </div>
+
+	    <div class="col-lg-3">
+	        <h4>Job Types</h4>
+	        <ul class="list-unstyled">
+			  <li>Engineering</li>
+			  <li>Data Analyst</li>
+			  <li>Marketing</li>
+			  <li>Writing</li>
+			  <li>Support</li>
+			</ul>
+	    </div>
+	</div>
+	
+	<div class = "row">
+	     <div class="col-12">
+	     	<p>
+
+	     </div>
+	</div>
+
+    <footer class="footer">
+      <p>&copy; Company 2014</p>
+    </footer>
+</div>
+
