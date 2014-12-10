@@ -2,15 +2,31 @@ ActiveAdmin.register Question do
 
 permit_params :textQuestion, :company_id, :stringJobTypec, 
               :stringTopic, :topic_id, :job_types_id, :questions_has_companies, 
-              :company, :companies
+              :company, :companies,
+
+              {questions_has_companies_attributes: [:company_id, :stringName, :question_id, :_destroy]}
+
+
 
 menu priority: 2
 
 index do
   selectable_column
   column 'Interview Question', :textQuestion
+  
+  column 'Companies' do |question|
+    #attributes_table do
+     # row :companies do |question|
+        question.companies.map { |q| q.stringName }.join(", ").html_safe
+     # end
+    #end
+  end
+
+
+
+
   column "Company Name" do |question|
-    c = Company.find_by_id(question.company_id) 
+    c = Company.find_by_id(question.companies) 
     if c 
       c.stringName else "No company"
     end 
@@ -44,6 +60,9 @@ end
           deg.input :company
         end
       end
+
+
+
     end
     f.actions
  end
