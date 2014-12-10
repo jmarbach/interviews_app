@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   #get 'static_pages/home'
 
   get 'help' => 'static_pages#help'
+  get 'sample_question' => 'static_pages#sample_question'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
