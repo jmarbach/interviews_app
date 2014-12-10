@@ -5,7 +5,7 @@ Rails.application.configure do
  config.action_mailer.default_url_options = { host: 'http://thawing-tundra-1317.herokuapp.com', port: 3000 }
 
 #These settings are for the sending out email for active admin and consequently the   devise mailer
-  ActionMailer::Base.delivery_method = :smtp
+  ActionMailer::Base.delivery_method = :test
   ActionMailer::Base.perform_deliveries = true
   ActionMailer::Base.raise_delivery_errors = true
   ActionMailer::Base.smtp_settings = 
