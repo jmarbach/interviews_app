@@ -6,13 +6,15 @@ class StaticPagesController < ApplicationController
   end
 
   def sample_question
-  	@question = Question.first
-  	@topic = Topic.first
-  	@jobtype = JobType.first
 
+    # Select Questions from Questions where Question.id = "1"
+    @question = Question.find_by textQuestion: "How many golf balls fit into a 747?"
+    @topic = Topic.first
+  	@jobtype = JobType.first
+   
   	@answer = @question.answer
-  	#@topic = @question.topic
-  	#@jobtype = @question.job_type
+    @companies = @question.companies
+
   end
 
 end
