@@ -52,31 +52,3 @@ end
  end
 end
 
-
-
-  # f.inputs "Companies" do
-  #   f.input :id, :label => "Selected Companies",  
-  #             :as => :check_boxes, 
-  #             :multiple => true, 
-  #             :collection => Company.all,
-  #             :selected => @resources
-  # end
-
-  # f.inputs "Companies" do
-  #   f.has_many :companies do |c|
-  #     c.input :company_id,  :as => :check_boxes, :collection => Company.all rescue nil
-  #   end
-  # end
-
-  # form do |c|
-  #   c.semantic_errors *c.object.errors.keys
-  #   c.inputs "Companies" do
-  #     c.has_many :questions_has_companies do |deg|
-  #       deg.input :company
-  #     end
-  #   end
-  #   c.actions
-  # end 
-  
-  #f.has_many :companies, :label => "Companies", :as => :check_boxes, :collection => Company.all
-
