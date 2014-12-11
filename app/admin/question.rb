@@ -15,22 +15,8 @@ index do
   column 'Interview Question', :textQuestion
   
   column 'Companies' do |question|
-    #attributes_table do
-     # row :companies do |question|
         question.companies.map { |q| q.stringName }.join(", ").html_safe
-     # end
-    #end
   end
-
-
-
-
-  column "Company Name" do |question|
-    c = Company.find_by_id(question.companies) 
-    if c 
-      c.stringName else "No company"
-    end 
-  end 
   
   column "Topic" do |question|
     t = Topic.find_by_id(question.topic_id) 
@@ -53,6 +39,7 @@ end
       f.input :textQuestion, :label => "Question"
       
       f.input :topic_id, :label => "Question Topic", :as => :select, :collection => Topic.all
+      
       f.input :job_types_id, :label => "Job Type", :as => :select, :collection => JobType.all
       
       f.inputs "Companies" do
@@ -60,13 +47,12 @@ end
           deg.input :company
         end
       end
-
-
-
     end
     f.actions
  end
 end
+
+
 
   # f.inputs "Companies" do
   #   f.input :id, :label => "Selected Companies",  
